@@ -225,7 +225,7 @@ def main():
 
     args = parser.parse_args()
 
-    output_dir = args.output if args.output else os.path.join(args.folder_path, "PAE_plots")
+    output_dir = args.output if args.output else os.path.join(args.folder_path, "pae_plddt_contacts_plots")
     process_folder(args.folder_path, output_dir)
 
 

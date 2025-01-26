@@ -31,6 +31,37 @@ Contact Probabilities
 
 Replace script_name.py with the name of the script you want to run (e.g., pae_plots.py) and folder_path with the path to the folder containing your AlphaFold results. The optional --output argument allows you to specify a different output directory for the generated plots.
 
+
+* `plot_summary.py`
+
+Overall Workflow
+
+The script reads the JSON files containing chain IPTM and PTM data.
+It aggregates the data for each chain across all files.
+It creates and displays boxplots for both IPTM and PTM data, saving the plots as images.
+
+To run the script, provide the path to the folder containing the JSON files as an argument. 
+
+Example:
+
+`python script_name.py path_to_json_files`
+
+* Optional Argument:
+
+`--output or -o`: Specify the desired output directory for saving the plots. If not provided, the script creates a "summary_plots" folder within the input directory. 
+
+Key Features:
+
+Batch Processing: Efficiently processes all JSON files matching the pattern *summary_confidences_*.json within a given folder.
+
+
+* `plot_pae_plddt_contact.py`
+
+Visualizes protein structure prediction data by generating combined plots of pLDDT (predicted Local Distance Difference Test), PAE (Predicted Aligned Error), and contact probability matrices. It reads data from JSON files, processes it, and creates informative visualisations to help analyze the quality and confidence of predicted protein structures.
+
+Example:
+`python plot_pae_plddt_contact.py path_to_json_files`
+
 ### Key Metrics Explained:
 
 * pLDDT: Per-atom confidence score (0-100). Higher is better.

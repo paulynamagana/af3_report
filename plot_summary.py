@@ -172,7 +172,7 @@ def main():
     args = parser.parse_args()
 
     # Set output folder
-    output_dir = args.output if args.output else os.path.join(args.folder_path, "chain_iptm_plots")
+    output_dir = args.output if args.output else os.path.join(args.folder_path, "summary_plots")
 
     # Process all matching JSON files in the folder
     process_folder(args.folder_path, output_dir)
